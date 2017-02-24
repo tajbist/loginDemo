@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="loginUser@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="loginuser">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="abc"/>
+    <schema id="4" parent="1" name="apps"/>
+    <schema id="5" parent="1" name="blog"/>
+    <schema id="6" parent="1" name="bookplus"/>
+    <schema id="7" parent="1" name="crud"/>
+    <schema id="8" parent="1" name="crudops"/>
+    <schema id="9" parent="1" name="cs544"/>
+    <schema id="10" parent="1" name="cshop_db"/>
+    <schema id="11" parent="1" name="dailydairy"/>
+    <schema id="12" parent="1" name="datajpa"/>
+    <schema id="13" parent="1" name="dormmgmt"/>
+    <schema id="14" parent="1" name="english_dict"/>
+    <schema id="15" parent="1" name="fatest"/>
+    <schema id="16" parent="1" name="finaljpa"/>
+    <schema id="17" parent="1" name="hibernate"/>
+    <schema id="18" parent="1" name="hibernate_app"/>
+    <schema id="19" parent="1" name="information_schema"/>
+    <schema id="20" parent="1" name="javahelps"/>
+    <schema id="21" parent="1" name="jpa"/>
+    <schema id="22" parent="1" name="jpaexamples"/>
+    <schema id="23" parent="1" name="jsp"/>
+    <schema id="24" parent="1" name="login"/>
+    <schema id="25" parent="1" name="mysql"/>
+    <schema id="26" parent="1" name="openmart"/>
+    <schema id="27" parent="1" name="performance_schema"/>
+    <schema id="28" parent="1" name="quiz1"/>
+    <schema id="29" parent="1" name="registration_02"/>
+    <schema id="30" parent="1" name="restapi"/>
+    <schema id="31" parent="1" name="sakila"/>
+    <schema id="32" parent="1" name="sample"/>
+    <schema id="33" parent="1" name="security"/>
+    <schema id="34" parent="1" name="servlet"/>
+    <schema id="35" parent="1" name="studentinfo"/>
+    <schema id="36" parent="1" name="sys"/>
+    <schema id="37" parent="1" name="test"/>
+    <schema id="38" parent="1" name="test1"/>
+    <schema id="39" parent="1" name="userbase"/>
+    <schema id="40" parent="1" name="userdb"/>
+    <schema id="41" parent="1" name="vfc"/>
+    <schema id="42" parent="1" name="waterfire"/>
+    <schema id="43" parent="1" name="world"/>
+    <schema id="44" parent="1" name="xmea"/>
+    <table id="45" parent="2" name="user_roles"/>
+    <table id="46" parent="2" name="users"/>
+    <column id="47" parent="45" name="user_role_id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="48" parent="45" name="username">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="45" name="role">
+      <Position>3</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="50" parent="45" name="fk_username_idx">
+      <ColNames>username</ColNames>
+    </index>
+    <index id="51" parent="45" name="uni_username_role">
+      <ColNames>role
+username</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="52" parent="45" name="PRIMARY">
+      <ColNames>user_role_id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <key id="53" parent="45" name="uni_username_role">
+      <ColNames>role
+username</ColNames>
+      <UnderlyingIndexName>uni_username_role</UnderlyingIndexName>
+    </key>
+    <foreign-key id="54" parent="45" name="fk_username">
+      <ColNames>username</ColNames>
+      <RefSchemaName>loginuser</RefSchemaName>
+      <RefTableName>users</RefTableName>
+      <RefColNames>username</RefColNames>
+    </foreign-key>
+    <column id="55" parent="46" name="username">
+      <Position>1</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="46" name="password">
+      <Position>2</Position>
+      <DataType>varchar(45)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="57" parent="46" name="enabled">
+      <Position>3</Position>
+      <DataType>tinyint(4)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;1&apos;</DefaultExpression>
+    </column>
+    <key id="58" parent="46" name="PRIMARY">
+      <ColNames>username</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
