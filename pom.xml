@@ -16,6 +16,8 @@
     <mysql.connector.version>5.1.30</mysql.connector.version>
   </properties>
 
+
+some changes 
   <dependencies>
 
   <!-- Spring 3 dependencies -->
